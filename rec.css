@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #243247;
+    line-height: 1.6;
+}
+.navbar {
+    background: #12345a;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navbar h2 {
+    font-size: 25px;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: #00dfd8;
+}
+.hero {
+    background: linear-gradient(135deg, #12345a, #2467a5);
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+#heading {
+    font-size: 45px;
+    background: linear-gradient(
+        90deg,
+        #ff0080,
+        #7928ca,
+        #00dfd8,
+        #ff0080
+    );
+    background-size: 300% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: colorChange 4s linear infinite;
+}
+
+@keyframes colorChange {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: 300% center;
+    }
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Introduction */
+.intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.intro h2 {
+    color: #12345a;
+    margin-bottom: 12px;
+}
+
+/* Recruiter Grid */
+.recruiters {
+    max-width: 1100px;
+    margin: 30px auto 50px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Company Cards */
+.company-card {
+    background: white;
+    padding: 28px 18px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.company-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 22px rgba(18, 52, 90, 0.18);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2467a5;
+    margin-bottom: 15px;
+}
+
+.company-card h3 {
+    color: #12345a;
+    margin-bottom: 8px;
+}
+
+.company-card p {
+    color: #667085;
+    font-size: 14px;
+}
+
+/* Opportunities */
+.opportunities {
+    background: #e5eef8;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.opportunities h2 {
+    color: #12345a;
+    margin-bottom: 12px;
+}
+
+.opportunities p {
+    margin-bottom: 22px;
+}
+
+.btn {
+    display: inline-block;
+    background: #12345a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #2467a5;
+}
+
+/* Footer */
+footer {
+    background: #12345a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 750px) {
+    .recruiters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recruiters {
+        grid-template-columns: 1fr;
+    }
+
+    #heading {
+        font-size: 34px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 12px;
+    }
+}

@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #243247;
+    line-height: 1.6;
+}
+.navbar {
+    background: #12345a;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar h2 {
+    font-size: 25px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #00dfd8;
+}
+.hero {
+    background: linear-gradient(135deg, #12345a, #2467a5);
+    text-align: center;
+    padding: 55px 20px;
+    color: white;
+}
+
+#heading {
+    font-size: 42px;
+    background: linear-gradient(
+        90deg, #ff0080, #7928ca, #00dfd8, #ff0080
+    );
+    background-size: 300% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: colorChange 4s linear infinite;
+}
+
+@keyframes colorChange {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: 300% center;
+    }
+}
+.intro {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    color: #12345a;
+    margin-bottom: 12px;
+}
+.schedule {
+    max-width: 1100px;
+    margin: 30px auto 45px;
+    padding: 0 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background: #12345a;
+    color: white;
+    padding: 16px 12px;
+}
+
+td {
+    padding: 15px 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background: #eaf1f8;
+}
+
+tbody tr:hover {
+    background: #d5e8fa;
+}
+.note {
+    background: #e5eef8;
+    padding: 30px 8%;
+    margin-top: 20px;
+}
+
+.note h2 {
+    color: #12345a;
+    margin-bottom: 12px;
+}
+footer {
+    background: #12345a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+@media (max-width: 600px) {
+    .navbar {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #heading {
+        font-size: 32px;
+    }
+
+    th, td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+}
